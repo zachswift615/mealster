@@ -1,0 +1,17 @@
+ .container {
+   max-width: 500px
+ }
+ .meal-btn {
+   margin-top: 15px;
+ }
+
+ .card {
+   display: inline-block;
+   width: auto;
+   margin-right: 15px;
+   margin-bottom: 12px;
+ }
+
+ select {
+   margin-right: 15px;
+ }
