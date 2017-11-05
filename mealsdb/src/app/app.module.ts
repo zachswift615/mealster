@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {FormsModule} from '@angular/forms'
-
+import { ClarityModule } from 'clarity-angular';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -11,7 +11,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ClarityModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
