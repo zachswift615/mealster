@@ -1,0 +1,47 @@
+<div class="container">
+  <h2>Create New Meal</h2>
+  <div class="form-group">
+    <div class="form-group">
+      <label for="mealName">Meal Name</label>
+      <input [(ngModel)]="meal.name" class="form-control" id="mealName">
+    </div>
+    <div class="form-group">
+      <select name="mealItemSelect" id="" [(ngModel)]="selected.mealItem">
+        <option *ngFor="let item of mealItems"
+                [ngValue]="item" ngDefaultControl>{{item.name}}
+        </option>
+      </select>
+      <button class="btn btn-sm btn-primary"
+              (click)="addItemToMeal()">Add item to meal
+      </button>
+    </div>
+    <div>
+      <div *ngFor="let item of meal.mealItems" class="card">
+        <div class="card-body">{{item.name}}</div>
+      </div>
+    </div>
+    <button class="btn btn-primary meal-btn" (click)="addMeal()">Save</button>
+  </div>
+
+  <hr>
+
+  <h2>Meals</h2>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let meal of meals">{{meal.name}}</li>
+  </ul>
+  <hr>
+  <h2>Add New Item</h2>
+  <div class="form-group">
+    <label for="mealItemName">Meal Item Name</label>
+    <input [(ngModel)]="mealItem.name" class="form-control" id="mealItemName">
+    <button class="btn btn-primary meal-btn" (click)="addMealItem()">Save
+    </button>
+  </div>
+
+  <h2>Meal Items</h2>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of mealItems">{{item.name}}
+    </li>
+  </ul>
+
+</div>
